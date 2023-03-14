@@ -4,9 +4,17 @@
         <servlet-name>Url</servlet-name>
         <servlet-class>Url</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FrontServlet</servlet-name>
+        <servlet-class>etu2041.framework.FrontServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Url</servlet-name>
         <url-pattern>/Url</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FrontServlet</servlet-name>
+        <url-pattern>/FrontServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
