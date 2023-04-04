@@ -33,7 +33,7 @@ public class Utilitaire {
                     String classe_avec_son_package=liste[i].toString().split("\\.")[0].replace(emplacement_des_classes , "").replace("\\" , ".");
                     Class A=Class.forName(classe_avec_son_package);
                     Method[] emp= A.getDeclaredMethods() ;
-                    Class urls= Class.forName("etu1852.annotation.Urls");
+                    Class urls= Class.forName("etu2041.annotation.Urls");
                             System.out.println(classe_avec_son_package);
                     for(int j=0 ; j<emp.length ; j++){
                         Urls u= (Urls)emp[j].getAnnotation(urls);
@@ -55,10 +55,8 @@ public class Utilitaire {
             String pkg="\\";
             File dir = new File(System.getProperty("user.dir")+"\\");
             // System.out.println(System.getProperty("user.dir")+"\\");
-            // File dir = new File("E:\\apache_tomcat9\\webapps\\Sprint3\\WEB-INF\\classes\\");
             Utilitaire fonction = new Utilitaire();
-            // System.out.println(fonction.tout_fichier1("E:\\apache_tomcat9\\webapps\\Sprint3\\WEB-INF\\classes\\",dir , resultat).get(0).getMethod());
-            System.out.println(fonction.tout_fichier("E:\\apache_tomcat9\\webapps\\Sprint4\\framework\\WEB-INF\\classes\\",dir , a).get("emp-all"));
+            System.out.println(fonction.tout_fichier("C:\\Users\\manou cherie\\Documents\\NetBeansProjects\\S4\\Naina\\Sprint_Framework\\src\\java\\etu2041\\model",dir , a).get("emp-all"));
         }catch(Exception e){
             System.out.println(e);
         }
